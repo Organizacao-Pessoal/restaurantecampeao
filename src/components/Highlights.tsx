@@ -8,25 +8,25 @@ const items = [
 ];
 
 const Highlights = () => (
-  <section id="diferenciais" className="py-20 gradient-section">
+  <section id="diferenciais" className="py-24 bg-background">
     <div className="container mx-auto px-4">
-      <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-4">
+      <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-3">
         Por que escolher o Campeão?
       </h2>
-      <p className="font-body text-muted-foreground text-center max-w-lg mx-auto mb-14">
+      <p className="font-body text-muted-foreground text-center max-w-lg mx-auto mb-16">
         Mais do que um restaurante, somos parte da rotina das famílias de São Caetano.
       </p>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {items.map((item) => (
           <div
             key={item.title}
-            className="bg-card rounded-2xl p-8 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 text-center"
+            className="bg-card rounded-2xl p-8 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 text-center border border-border/50"
           >
             <div className="w-14 h-14 mx-auto mb-5 rounded-xl bg-primary/10 flex items-center justify-center">
               <item.icon className="text-primary" size={28} />
             </div>
-            <h3 className="font-display text-lg font-bold text-foreground mb-2">{item.title}</h3>
-            <p className="font-body text-sm text-muted-foreground">{item.desc}</p>
+            <h3 className="font-display text-base font-bold text-foreground mb-2">{item.title}</h3>
+            <p className="font-body text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
           </div>
         ))}
       </div>

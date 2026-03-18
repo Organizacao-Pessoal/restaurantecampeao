@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,41 +6,43 @@
 
 @layer base {
   :root {
-    --background: 40 33% 98%;
-    --foreground: 0 0% 0%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 7%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card-foreground: 0 0% 7%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 0 0% 7%;
 
     --primary: 33 78% 52%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 40 95% 61%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary-foreground: 0 0% 7%;
 
-    --muted: 0 0% 65%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 30 10% 96%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 40 95% 61%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 33 78% 52%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 85%;
-    --input: 0 0% 85%;
+    --border: 30 10% 90%;
+    --input: 30 10% 90%;
     --ring: 33 78% 52%;
 
     --radius: 0.75rem;
 
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
+    --section-bg: 35 30% 97%;
 
-    --shadow-card: 0 4px 20px -4px hsla(33, 78%, 52%, 0.12);
-    --shadow-hover: 0 8px 30px -4px hsla(33, 78%, 52%, 0.2);
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+
+    --shadow-card: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.06);
+    --shadow-hover: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 4px 10px -4px rgba(0, 0, 0, 0.04);
   }
 }
 
@@ -56,6 +58,8 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4 {
@@ -81,11 +85,11 @@
   }
 
   .gradient-hero {
-    background: linear-gradient(135deg, hsla(33, 78%, 52%, 0.85) 0%, hsla(40, 95%, 61%, 0.7) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.55) 100%);
   }
 
   .gradient-section {
-    background: linear-gradient(180deg, hsl(40 33% 98%) 0%, hsl(40 40% 95%) 100%);
+    background-color: hsl(var(--section-bg));
   }
 }
 

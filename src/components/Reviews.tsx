@@ -24,21 +24,21 @@ const Stars = () => (
 );
 
 const Reviews = () => (
-  <section id="avaliacoes" className="py-20">
+  <section id="avaliacoes" className="py-24 gradient-section">
     <div className="container mx-auto px-4">
-      <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-4">
+      <h2 className="font-display text-3xl md:text-4xl font-bold text-center text-foreground mb-3">
         O que nossos clientes dizem
       </h2>
-      <p className="font-body text-muted-foreground text-center max-w-lg mx-auto mb-14">
+      <p className="font-body text-muted-foreground text-center max-w-lg mx-auto mb-16">
         Avaliações reais de quem frequenta o Restaurante Campeão.
       </p>
       <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {reviews.map((r) => (
           <div
             key={r.name}
-            className="bg-card rounded-2xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border/50"
+            className="bg-card rounded-2xl p-7 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border/50"
           >
-            <div className="flex items-center gap-2 mb-1">
+            <div className="flex items-center gap-2 mb-2">
               <img
                 src="https://www.google.com/favicon.ico"
                 alt="Google"
@@ -47,7 +47,7 @@ const Reviews = () => (
               <span className="font-body text-xs text-muted-foreground">Google Reviews</span>
             </div>
             <Stars />
-            <p className="font-body text-sm text-foreground/80 leading-relaxed mb-4">
+            <p className="font-body text-sm text-foreground/80 leading-relaxed mb-5">
               "{r.text}"
             </p>
             <div className="flex items-center gap-3">
